@@ -1,0 +1,102 @@
+<html>
+<head>
+    <title>
+        Test na výzkum demence
+    </title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" type="text/css" >
+
+    <!-- Scripts -->
+    <script type="text/javascript">
+        var global_variable
+    </script>
+    <script src="script.js" type="text/javascript"></script>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://cak.zcu.cz:9444/speechcloud.js"></script>
+
+    <audio id="audioout"></audio>
+
+</head>
+<div id="patientIdentification">
+<body onload="onBodyLoad()">
+    <label for="testDate">Datum vyšetření: </label>
+        <input type="date" id="testDate" name="testDate"
+            min="2021-01-01" max="2100-12-31">
+        <br><br>
+    <label for="place">Místo vyšetření:</label>
+            <select name="place" id="place">
+                <option value="FKNV">FKNV</option>
+            </select>
+        <br><br>
+        <p>Kategorie pacienta:</p>
+            <input type="radio" id="patientCategory" name="patient" value="Pacient">
+        <label for="patient">Pacient</label><br>
+            <input type="radio" id="patientCategory" name="regular" value="Normální osoba">
+        <label for="regular">Normální osoba</label><br>
+            <input type="radio" id="patientCategory" name="adultChild" value="Dospělé dítě pacienta">
+        <label for="adultChild">Dospělé dítě pacienta</label>
+        <br><br>
+    <label for="patientId">Identifikační číslo osoby: </label>
+        <input type="number" id="patientId" name="patientId" readonly="readonly"><br><br>
+    <label for="fname">Křestní jméno: </label>
+        <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">První písmeno příjmení: </label>
+        <input type="text" id="lname" name="lname"><br><br>
+    <label for="dateOfBirth">Datum vyšetření: </label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth"
+                value="1970-01-01"
+                min="1920-01-01" max="2100-12-31">
+        <br><br>
+    <label for="abadeco">Identifikační číslo v projektu ABADECO: </label>
+        <input type="text" id="abadeco" name="abadeco"><br><br>
+    <button onclick="patientIdentification()">Click me</button>
+</body>
+</div>
+<div id="numbersRepeating">
+    <body onload="onBodyLoad()">
+        <button id="start" class="button_start center" disabled>ZAČÍT</button>
+    
+        <button id="next_test" class="button_next center">Pokračovat</button>
+        
+        <div id="log" class="center" style="font-size:x-large"></div>
+    
+        <div id="upper_log" class="higher-center" style="font-size:x-large"></div>
+    
+        <div id="doc" style="width: 40%; min-width: 40%; height: 100%; position: absolute; top: 0px; right: 0px"></div>
+    
+      </body>
+</div>
+<div id="lakePicture">
+    <body>
+
+        <button id="next_test" class="button_next center">Pokračovat</button>
+    
+        <img src="./pictures/obr.jpg" style="top: 57%;" class="center" id="breh"  width="900" height="600">
+    
+        <span id="countdown_0" class="higher-center" style="display: none;">60s</span>
+        
+        <div id="log" class="center" style="font-size:x-large"></div>
+    
+        <div id="upper_log" class="higher-center" style="font-size:x-large">Nyní vidíte před sebou obrázek na břehu rybníka. <br> Na obrázku je několik osob a děje se tam celá řada činností. <br> Zkuste toho prosím nyní co nejvíce popsat.</div>
+    
+        <div id="doc" style="width: 40%; min-width: 40%; height: 100%; position: absolute; top: 0px; right: 0px"></div>
+    
+      </body>
+</div>
+<div id="numbersRemembering">
+    <body>
+
+        <button id="next_test" class="button_next center">Pokračovat</button>
+    
+        <span id="countdown_1" class="high-center" style="display: none;">30s</span>
+
+        <img src="./pictures/obrazek.jpg" class="center" id="well_done"  width="300" height="300">
+        
+        <div id="log" class="center" style="font-size:x-large">Nyní budete mít za úkol vyjmenovat co NEJRYCHLEJI co NEJVÍCE ZVÍŘAT, <br> tedy živočichů, kteří žijí na souši, ve vodě, ve vzduchu nebo i hmyz. <br> Prostě jakékoliv zvíře, které Vás napadne. <br> Zkouška je na čas, buďte tedy co nejrychlejší. Máte na to půl minuty. Připravte se a začínáme. <br> Teď!</div>
+    
+        <div id="doc" style="width: 40%; min-width: 40%; height: 100%; position: absolute; top: 0px; right: 0px"></div>
+       
+      </body>
+</div>
+</html>
